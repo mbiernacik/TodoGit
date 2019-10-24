@@ -12,7 +12,7 @@ class Controller {
         this.view = view
 
         // Explicit this binding
-        this.model.bindTodoListChanged(this.onTodoListChanged)
+        this.model.bindTodoListChangedCallback(this.onTodoListChanged)
         this.view.bindAddTodo(this.handleAddTodo)
         this.view.bindEditTodo(this.handleEditTodo)
         this.view.bindDeleteTodo(this.handleDeleteTodo)

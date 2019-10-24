@@ -5,16 +5,17 @@
  */
 class Model {
     constructor() {
-        this.todos = JSON.parse(localStorage.getItem('todos')) || []
+        this.LOCAL_STORAGE_KEY = 'todos';
+        this.todos = JSON.parse(localStorage.getItem(this.LOCAL_STORAGE_KEY)) || []
     }
 
-    bindTodoListChanged(callback) {
+    bindTodoListChangedCallback(callback) {
         this.onTodoListChanged = callback
     }
 
     _commit(todos) {
         this.onTodoListChanged(todos)
-        localStorage.setItem('todos', JSON.stringify(todos))
+        localStorage.setItem(this.LOCAL_STORAGE_KEY, JSON.stringify(todos))
     }
 
     addTodo(todoText) {

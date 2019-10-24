@@ -16,8 +16,10 @@ class View {
         this.form.append(this.input, this.submitButton)
         this.title = this.createElement('h1')
         this.title.textContent = 'Todo Git'
+        this.subTitle = this.createElement('h4');
+        this.subTitle.textContent = "Git workshop";
         this.todoList = this.createElement('ul', 'todo-list')
-        this.app.append(this.title, this.form, this.todoList)
+        this.app.append(this.title, this.subTitle, this.form, this.todoList)
 
         this._temporaryTodoText = ''
         this._initLocalListeners()
