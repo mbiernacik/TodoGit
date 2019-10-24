@@ -9,7 +9,7 @@ class View {
         this.form = this.createElement('form')
         this.input = this.createElement('input')
         this.input.type = 'text'
-        this.input.placeholder = 'Add todo'
+        this.input.placeholder = 'What would you like to do?'
         this.input.name = 'todo'
         this.submitButton = this.createElement('button')
         this.submitButton.textContent = 'Submit'
