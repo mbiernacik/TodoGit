@@ -1,8 +1,3 @@
-/**
- * @class View
- *
- * Visual representation of the model.
- */
 class View {
     constructor() {
         this.app = this.getElement('#root')
@@ -46,18 +41,15 @@ class View {
     }
 
     displayTodos(todos) {
-        // Delete all nodes
         while (this.todoList.firstChild) {
             this.todoList.removeChild(this.todoList.firstChild)
         }
 
-        // Show default message
         if (todos.length === 0) {
             const p = this.createElement('p')
             p.textContent = 'Nothing to do! Add a task?'
             this.todoList.append(p)
         } else {
-            // Create nodes
             todos.forEach(todo => {
                 const li = this.createElement('li')
                 li.id = todo.id
@@ -82,13 +74,9 @@ class View {
                 deleteButton.textContent = 'Delete'
                 li.append(checkbox, span, deleteButton)
 
-                // Append nodes
                 this.todoList.append(li)
             })
         }
-
-        // Debugging
-        console.log(todos)
     }
 
     _initLocalListeners() {
