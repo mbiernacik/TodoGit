@@ -12,7 +12,7 @@ class View {
         this.input.placeholder = 'Add todo'
         this.input.name = 'todo'
         this.submitButton = this.createElement('button')
-        this.submitButton.textContent = 'Submit'
+        this.submitButton.textContent = 'Add'
         this.form.append(this.input, this.submitButton)
         this.title = this.createElement('h1')
         this.title.textContent = 'Todo Git'
